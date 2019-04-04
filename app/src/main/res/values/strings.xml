@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">box!</string>
+
+    <string name="btn_login">Войти</string>
+    <string name="bottomText_login">РАБОТАЕТ НА\nVK API</string>
+    <string name="upperText_login">БЕСПЛАТНОЕ\nХРАНИЛИЩЕ\nДОКУМЕНТОВ</string>
+
+    <string name="copy_url">Ссылка успешно скопирована</string>
+
+    <string name="acces_deletefrag">Вы действительно хотите удалить выбранный объект?</string>
+    <string name="yes_deletefrag">Да</string>
+    <string name="no_deletefrag">Отмена</string>
+
+    <string name="pop_change_name">Название изменено</string>
+
+
+    <string name="doc_default_type">doc</string>
+    <string name="doc_default_name">Document</string>
+    <string name="doc_default_size">1.1Mb</string>
+    <string name="doc_default_date">1.01.1991</string>
+
+    <integer name="com_vk_sdk_AppId">6859988</integer>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">box!</string>
+    <string name="nav_header_subtitle">mail will be here</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_settings">Настройки</string>
+    <string name="bottomMail_stat">evan.bishop@yahoo.com</string>
+    <string name="fileCountText_stat">Загружено файлов</string>
+    <string name="countFile_stat">/2000"</string>
+
+    <string name="menu_text">Текстовые документы</string>
+    <string name="menu_book">Книги</string>
+    <string name="menu_anim">Гифки</string>
+    <string name="menu_audio">Музыка</string>
+    <string name="menu_video">Видео</string>
+    <string name="menu_other">Прочее</string>
+    <string name="menu_zip">Архивы</string>
+    <string name="menu_pic">Картинки</string>
+    <string name="menu_all">Все категории</string>
+
+    <string name="discrip_up">Всего вы можете загрузить 2000 файлов, это ограничение сервера.</string>
+    <string name="discrip_dn">Также напоминаем что файлы не должны быть исполняемыми или формата mp3 и содержать в своем названии любые специальные символы кроме дефиса или нижнего подчеркивания.</string>
+
+
+    <string name="no_file">Файлов не обнаружено</string>
+
+    <string name="filenot_upload">Файл не выбран</string>
+    <string name="buttonText_upload">Загрузить!</string>
+    <string name="supportinf_upload">Все кроме mp3 и приложений. Максимум 200Мб</string>
+
+</resources>
