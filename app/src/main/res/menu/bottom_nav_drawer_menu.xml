@@ -4,39 +4,39 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav0"
-            android:icon="@drawable/baseline_folder_24"
+            android:icon="@drawable/icon_folder"
             android:title="@string/menu_all" />
         <item
             android:id="@+id/nav1"
-            android:icon="@drawable/baseline_description_black_24"
+            android:icon="@drawable/icon_text"
             android:title="@string/menu_text" />
         <item
             android:id="@+id/nav2"
-            android:icon="@drawable/baseline_archive_24"
+            android:icon="@drawable/icon_archive"
             android:title="@string/menu_zip" />
         <item
             android:id="@+id/nav3"
-            android:icon="@drawable/baseline_gif_24"
+            android:icon="@drawable/icon_gif"
             android:title="@string/menu_anim" />
         <item
             android:id="@+id/nav4"
-            android:icon="@drawable/baseline_image_24"
+            android:icon="@drawable/icon_image"
             android:title="@string/menu_pic" />
         <item
             android:id="@+id/nav5"
-            android:icon="@drawable/baseline_music_note_24"
+            android:icon="@drawable/icon_music"
             android:title="@string/menu_audio" />
         <item
             android:id="@+id/nav6"
-            android:icon="@drawable/baseline_videocam_24"
+            android:icon="@drawable/icon_video"
             android:title="@string/menu_video" />
         <item
             android:id="@+id/nav7"
-            android:icon="@drawable/baseline_book_24"
+            android:icon="@drawable/icon_book"
             android:title="@string/menu_book" />
         <item
             android:id="@+id/nav8"
-            android:icon="@drawable/baseline_help_outline_24"
+            android:icon="@drawable/icon_unknown"
             android:title="@string/menu_other" />
     </group>
 

@@ -2,7 +2,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center">
@@ -30,11 +29,11 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/icon_circle_doc"
+                android:background="@drawable/shape_item"
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="@string/doc_default_type"
-                android:textColor="@android:color/white"
+                android:textColor="#FFFFFF"
                 android:textSize="13sp"
                 android:textStyle="bold" />
 
@@ -48,20 +47,19 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@id/imageFileIconDetail"
+                android:layout_toRightOf="@id/imageFileIconDetail"
                 android:text="@string/doc_default_name"
-                android:autofillHints=""
-                tools:targetApi="o" />
+                android:autofillHints="" />
 
 
             <LinearLayout
                 android:id="@+id/textBarLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@id/imageFileIconDetail"
+                android:layout_toRightOf="@id/imageFileIconDetail"
                 android:layout_below="@id/textFileNameDetail"
                 android:weightSum="2"
-                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -70,7 +68,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textColor="#212121"
-                    android:layout_marginEnd="10dp"
+                    android:layout_alignStart="@+id/textFileNameDetail"
+                    android:layout_marginRight="10dp"
                     android:text="@string/doc_default_size" />
 
                 <TextView
@@ -78,7 +77,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
                     android:textColor="#212121"
                     android:text="@string/doc_default_date" />
             </LinearLayout>
@@ -91,7 +90,7 @@
                 android:layout_below="@id/textBarLayout"
                 android:weightSum="4"
                 android:padding="7dp"
-                android:background="@drawable/bar_background_color"
+                android:background="@drawable/shape_bar"
 
                 android:orientation="horizontal">
 
@@ -100,8 +99,9 @@
                     android:id="@+id/buttonEdit"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/btn_edit"
-                    android:contentDescription="TODO" />
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/btn_edit" />
 
                 <ImageView
                     android:layout_weight="1"
@@ -109,9 +109,9 @@
                     android:id="@+id/buttonDelete"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/btn_delete"
-                    android:contentDescription="TODO" />
+                    android:src="@drawable/btn_delete"/>
 
                 <ImageView
                     android:layout_weight="1"
@@ -119,6 +119,8 @@
                     android:id="@+id/buttonDownload"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
                     android:src="@drawable/btn_download"/>
 
                 <ImageView
@@ -126,9 +128,10 @@
                     android:id="@+id/buttonShare"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
 
-                    android:src="@drawable/btn_short"
-                    android:contentDescription="TODO" />
+                    android:src="@drawable/btn_url" />
 
             </LinearLayout>
 
