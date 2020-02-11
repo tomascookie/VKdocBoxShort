@@ -12,9 +12,8 @@
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="45dp">
+          android:layout_width="match_parent"
+            android:layout_height="55dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,7 +45,7 @@
         android:id="@+id/swiperefresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="55dp"
         android:layout_marginBottom="47dp">
 
 
@@ -67,7 +66,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:padding="5dp"
+			android:padding="5dp"
         android:src="@drawable/btn_fab_plus"
         app:layout_anchor="@id/bottom_app_bar"/>
 

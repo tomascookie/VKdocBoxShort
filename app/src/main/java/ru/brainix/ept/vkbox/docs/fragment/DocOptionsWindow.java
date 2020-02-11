@@ -4,6 +4,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -11,7 +12,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import ru.brainix.ept.vkbox.activity.MainActivity;
+import ru.brainix.ept.vkbox.activity.main.MainActivity;
 import ru.brainix.ept.vkbox.R;
 import ru.brainix.ept.vkbox.docs.functions.DocUrl;
 import ru.brainix.ept.vkbox.docs.functions.DocDownload;
@@ -78,23 +79,20 @@ public class DocOptionsWindow {
         dateText.setText(dateDoc);
 
         //Кнопка редактирования обработка
-        ImageView buttonEdit = popupView.findViewById(R.id.buttonEdit);
-        buttonEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Button buttonEdit = popupView.findViewById(R.id.buttonEdit);
+        buttonEdit.setOnClickListener(v -> {
 
-                //Если изменено название, то редактируем
-                if((titleDocEditText.getText().toString()) != titleDoc) {
+            //Если изменено название, то редактируем
+            if((titleDocEditText.getText().toString()) != titleDoc) {
 
-                    //Отправляем запрос на редактирование
-                    DocEdit docEdit = new DocEdit();
-                    docEdit.editDoc(view.getContext(), ownerId, docId, titleDocEditText.getText().toString());
-
-                }
-
-                Toast.makeText(view.getContext(), R.string.pop_change_name, Toast.LENGTH_SHORT).show();
+                //Отправляем запрос на редактирование
+                DocEdit docEdit = new DocEdit();
+                docEdit.editDoc(view.getContext(), ownerId, docId, titleDocEditText.getText().toString());
 
             }
+
+            Toast.makeText(view.getContext(), R.string.pop_change_name, Toast.LENGTH_SHORT).show();
+
         });
 
         //Кнопка удаления обработка

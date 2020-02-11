@@ -46,11 +46,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
                 android:layout_toRightOf="@id/imageFileIconDetail"
+                android:layout_toLeftOf="@id/buttonEdit"
                 android:text="@string/doc_default_name"
                 android:autofillHints="" />
 
+
+            <Button
+              android:layout_marginLeft="10dp"
+              android:id="@+id/buttonEdit"
+              android:text="@string/buttonText_edit"
+              android:layout_marginTop="5dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentEnd="true"
+              app:backgroundTint="@color/colorAccent"/>
 
             <LinearLayout
                 android:id="@+id/textBarLayout"
@@ -83,25 +94,15 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/buttonBarLayout"
-                android:layout_width="fill_parent"
+              android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:layout_below="@id/textBarLayout"
-                android:weightSum="4"
+                android:weightSum="3"
                 android:padding="7dp"
                 android:background="@drawable/shape_bar"
 
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_weight="1"
-                    android:id="@+id/buttonEdit"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/btn_edit" />
 
                 <ImageView
                     android:layout_weight="1"
@@ -111,7 +112,8 @@
                     android:layout_height="35dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/btn_delete"/>
+                  android:background="@drawable/shape_bar"
+                  android:src="@drawable/btn_delete"/>
 
                 <ImageView
                     android:layout_weight="1"
@@ -121,7 +123,9 @@
                     android:layout_height="35dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentBottom="true"
-                    android:src="@drawable/btn_download"/>
+                  android:background="@drawable/shape_bar"
+
+                  android:src="@drawable/btn_download"/>
 
                 <ImageView
                     android:layout_weight="1"
@@ -130,6 +134,7 @@
                     android:layout_height="35dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentBottom="true"
+                  android:background="@drawable/shape_bar"
 
                     android:src="@drawable/btn_url" />
 

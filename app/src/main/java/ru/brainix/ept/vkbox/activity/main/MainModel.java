@@ -1,4 +1,4 @@
-package ru.brainix.ept.vkbox.activity;
+package ru.brainix.ept.vkbox.activity.main;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -23,7 +23,11 @@ import ru.brainix.ept.vkbox.docs.data.DocumentModel;
 
 public class MainModel {
 
-    private String finalCount;
+    private IPresenterMain mainPresenter;
+
+    MainModel(MainPresenter mainPresenter){
+        this.mainPresenter = mainPresenter;
+    }
 
     //Форматируем размер файла в корректные величины
     private String sizeFormatter(int size){
@@ -73,29 +77,6 @@ public class MainModel {
 
         return doc;
     }
-
-    //Публичный метод получения кол-ва файлов
-    public String getCount(){
-
-        DocGetCount docGetCount = new DocGetCount();
-        docGetCount.execute();
-
-        String outCount = "0";
-        try {
-            outCount = docGetCount.get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-
-
-        return outCount;
-    }
-
-
 
     //Загружам данные документов в список элементов doc
     class DocDataDownlooad extends AsyncTask<String, Void, List<DocumentModel>>{
@@ -183,69 +164,15 @@ public class MainModel {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            MainActivity.pbVisible();
+            mainPresenter.preExec();
 
         }
 
         @Override
         protected void onPostExecute(List<DocumentModel> documentModels) {
             super.onPostExecute(documentModels);
-            MainActivity.pbInvivible();
+            mainPresenter.postExec();
         }
-    }
-
-    //Метод загрузки кол-ва файлов
-    class DocGetCount extends AsyncTask<Void, Void, String>{
-
-
-
-        @Override
-        protected String doInBackground(Void... voids) {
-
-            finalCount = "0";
-
-            VKRequest request = new VKRequest("docs.get", VKParameters.from("type", "0"));
-
-            request.executeSyncWithListener(new VKRequest.VKRequestListener() {
-
-                @Override
-                public void onComplete(VKResponse response) {
-
-                    try {
-
-
-                        JSONObject jsonObject = response.json.getJSONObject ("response");
-                        JSONArray items = jsonObject.getJSONArray ("items");
-                        int count = jsonObject.getInt("count");
-
-                        Log.i("MODEL!  count ", " "+count);
-
-                        finalCount = String.valueOf(count);
-
-
-
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-
-
-                @Override
-                public void onError(VKError error) {
-                }
-
-                @Override
-                public void attemptFailed(VKRequest request, int attemptNumber, int totalAttempts) {
-                }
-            });
-
-            return finalCount;
-
-        }
-
-
     }
 
 }

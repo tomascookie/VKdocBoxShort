@@ -19,15 +19,6 @@
     <string name="doc_default_size">1.1Mb</string>
     <string name="doc_default_date">1.01.1991</string>
 
-    <integer name="com_vk_sdk_AppId">6859988</integer>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="nav_header_title">box!</string>
-    <string name="nav_header_subtitle">mail will be here</string>
-    <string name="nav_header_desc">Navigation header</string>
-
     <string name="action_settings">Настройки</string>
     <string name="bottomMail_stat">evan.bishop@yahoo.com</string>
     <string name="fileCountText_stat">Загружено файлов</string>
@@ -52,5 +43,7 @@
     <string name="filenot_upload">Файл не выбран</string>
     <string name="buttonText_upload">Загрузить!</string>
     <string name="supportinf_upload">Все кроме mp3 и приложений. Максимум 200Мб</string>
+    <string name="buttonText_edit">Изменить</string>
+
 
 </resources>

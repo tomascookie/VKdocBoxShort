@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 
-import ru.brainix.ept.vkbox.activity.MainActivity;
+import ru.brainix.ept.vkbox.activity.main.MainActivity;
 import ru.brainix.ept.vkbox.R;
 
 

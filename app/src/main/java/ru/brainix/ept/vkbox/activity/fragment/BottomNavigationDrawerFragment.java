@@ -1,14 +1,17 @@
 package ru.brainix.ept.vkbox.activity.fragment;
 
 import android.os.Bundle;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import ru.brainix.ept.vkbox.R;
-import ru.brainix.ept.vkbox.activity.MainActivity;
-import ru.brainix.ept.vkbox.activity.MainPresenter;
+import ru.brainix.ept.vkbox.activity.main.MainActivity;
+import ru.brainix.ept.vkbox.activity.main.MainPresenter;
 
 public class BottomNavigationDrawerFragment extends BottomSheetDialogFragment {
 
@@ -27,45 +30,36 @@ public class BottomNavigationDrawerFragment extends BottomSheetDialogFragment {
 
             switch (menuItem.getItemId()) {
                 case R.id.nav0:
-                    ((MainActivity)getContext()).setRecyclerView("0");
-                    MainPresenter.type=0;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(0);
+                    break;
                 case R.id.nav1:
-                    ((MainActivity)getContext()).setRecyclerView("1");
-                    MainPresenter.type=1;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(1);
+                    break;
                 case R.id.nav2:
-                    ((MainActivity)getContext()).setRecyclerView("2");
-                    MainPresenter.type=2;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(2);
+                    break;
                 case R.id.nav3:
-                    ((MainActivity)getContext()).setRecyclerView("3");
-                    MainPresenter.type=3;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(3);
+                    break;
                 case R.id.nav4:
-                    ((MainActivity)getContext()).setRecyclerView("4");
-                    MainPresenter.type=4;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(4);
+                    break;
                 case R.id.nav5:
-                    ((MainActivity)getContext()).setRecyclerView("5");
-                    MainPresenter.type=5;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(5);
+                    break;
                 case R.id.nav6:
-                    ((MainActivity)getContext()).setRecyclerView("6");
-                    MainPresenter.type=6;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(6);
+                    break;
                 case R.id.nav7:
-                    ((MainActivity)getContext()).setRecyclerView("7");
-                    MainPresenter.type=7;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(7);
+                    break;
                 case R.id.nav8:
-                    ((MainActivity)getContext()).setRecyclerView("8");
-                    MainPresenter.type=8;
-                    return true;
+                    ((MainActivity)getContext()).mPresenter.menuSelected(8);
+                    break;
 
-                default:
-                    return true;
             }
+            dismiss();
+            return true;
         });
     }
 }

@@ -11,8 +11,8 @@ import com.vk.sdk.api.VKResponse;
 
 import java.util.concurrent.ExecutionException;
 
-import ru.brainix.ept.vkbox.activity.MainActivity;
-import ru.brainix.ept.vkbox.activity.MainPresenter;
+import ru.brainix.ept.vkbox.activity.main.MainActivity;
+import ru.brainix.ept.vkbox.activity.main.MainPresenter;
 
 
 public class DocEdit {
@@ -39,7 +39,7 @@ public class DocEdit {
         }
 
         //Обновляем список
-        ((MainActivity)cntxt).setRecyclerView(String.valueOf(MainPresenter.type));
+        ((MainActivity)cntxt).mPresenter.refreshSwyped();
 
         return editStatus;
     }

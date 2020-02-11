@@ -63,8 +63,7 @@
                 android:text="@string/filenot_upload" />
 
             <TextView
-                android:id="@+id/textDescription"
-                android:layout_width="match_parent"
+							android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/supportinf_upload"
                 android:layout_marginTop="10dp"

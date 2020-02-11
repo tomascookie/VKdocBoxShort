@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
 
-import ru.brainix.ept.vkbox.activity.MainActivity;
-import ru.brainix.ept.vkbox.activity.MainPresenter;
+import ru.brainix.ept.vkbox.activity.main.MainActivity;
+import ru.brainix.ept.vkbox.activity.main.MainPresenter;
 import ru.brainix.ept.vkbox.R;
 import ru.brainix.ept.vkbox.docs.functions.DocDelete;
 
@@ -37,7 +37,7 @@ public class DocDeleteFragment extends DialogFragment {
                         boolean state = del.deleteDoc(owner_id, doc_id);
 
                         //Обновляем данные в списке
-                        ((MainActivity)getContext()).setRecyclerView(String.valueOf(MainPresenter.type));
+                        ((MainActivity)getContext()).mPresenter.refreshSwyped();
 
                         //Пишем в лог состояние
                         if(state){ Log.i(LOG_TAG, " doc delete TRUE"); }
