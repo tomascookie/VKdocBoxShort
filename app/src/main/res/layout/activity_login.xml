@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gr3">
+    android:background="@drawable/maingradient">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="60dp"
         android:orientation="vertical">
 
         <TextView
@@ -14,18 +14,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="15dp"
-            android:padding="8dp"
+            android:padding="5dp"
             android:text="@string/app_name"
             android:textColor="@android:color/white"
-            android:textSize="24sp" />
-
+            android:textSize="35sp" />
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/upperText"
-        android:layout_width="wrap_content"
+			android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -37,8 +34,7 @@
         android:text="@string/upperText_login" />
 
     <TextView
-        android:id="@+id/bottomText"
-        android:layout_width="wrap_content"
+			android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -50,9 +46,6 @@
         android:text="@string/bottomText_login" />
 
 
-
-
-
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
@@ -62,7 +55,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="230dp"
-        android:background="@drawable/bar_background_color"
+        android:background="@drawable/shape_bar"
         android:text="@string/btn_login"
         android:textSize="16sp"
         android:textStyle="bold" />

@@ -32,9 +32,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/icon_circle_doc"
+                android:background="@drawable/shape_item"
                 android:padding="10dp"
-                android:src="@drawable/fold"/>
+                android:src="@drawable/btn_file_choose"/>
 
 
             <EditText
@@ -53,7 +53,8 @@
 
             <Button
                 android:id="@+id/buttonUpload"
-                android:background="@drawable/bar_background_color"
+                android:clickable="false"
+                android:background="@drawable/shape_bar"
                 android:layout_below="@id/buttonChoose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,8 +63,7 @@
                 android:text="@string/filenot_upload" />
 
             <TextView
-                android:id="@+id/textDescription"
-                android:layout_width="match_parent"
+							android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/supportinf_upload"
                 android:layout_marginTop="10dp"

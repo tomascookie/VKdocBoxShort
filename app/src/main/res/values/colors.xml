@@ -4,5 +4,8 @@
     <color name="colorPrimaryDark">#212121</color>
     <color name="colorAccent">#ffd54f</color>
     <color name="colorAccentBar">#448aff</color>
-    <color name="backgroundColor">#efebe9</color>
+    <color name="backgroundColor">#ece9e8</color>
+
+    <color name="colorSelected">#E6C146</color>
+    <color name="colorPressed">#B89936</color>
 </resources>

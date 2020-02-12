@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".StatisticAct"
-    android:background="@color/backgroundColor">
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/backgroundColor"
+  tools:context=".activity.statistic.StatisticActivity">
 
 
-
-<android.support.design.widget.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <android.support.design.widget.AppBarLayout
+      android:id="@+id/appBar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="45dp">
+					android:layout_width="match_parent"
+          android:layout_height="55dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textAppName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="15dp"
-                    android:padding="8dp"
-                    android:text="@string/app_name"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp" />
-
+                  android:id="@+id/textAppName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:padding="5dp"
+                  android:text="@string/app_name"
+                  android:textColor="@android:color/white"
+                  android:textSize="35sp"/>
 
 
             </LinearLayout>
@@ -45,87 +44,81 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/bottomMail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/bottomMail_stat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+			android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/bottomMail_stat"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
 
     <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp">
+			android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:padding="10dp"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/appBar">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/statTextCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+          android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="10dp"
-            android:weightSum="2">
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="10dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:weightSum="2">
 
-            <TextView
-                android:id="@+id/fileCountText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textStart"
-                android:textSize="18sp"
-                android:text="@string/fileCountText_stat" />
+                <TextView
+									android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="@string/fileCountText_stat"
+                  android:textAlignment="textStart"
+                  android:textSize="18sp"/>
 
-            <TextView
-                android:id="@+id/countText"
-                android:textAlignment="textEnd"
-                android:layout_weight="1"
-                android:textSize="18sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/countFile_stat" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:padding="10dp"
-            android:textSize="16sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/discrip_up" />
-    </android.support.v7.widget.CardView>
-
-
-    <android.support.v7.widget.CardView
-            android:id="@+id/cardView3"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:padding="10dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/discrip_dn" />
+                <TextView
+                  android:id="@+id/countText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:text="@string/countFile_stat"
+                  android:textAlignment="textEnd"
+                  android:textSize="18sp"/>
+            </LinearLayout>
         </android.support.v7.widget.CardView>
 
+
+        <android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp">
+
+            <TextView
+							android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:text="@string/discrip_up"
+              android:textSize="16sp"/>
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+					android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp">
+
+            <TextView
+							android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:text="@string/discrip_dn"
+              android:textSize="16sp"/>
+        </android.support.v7.widget.CardView>
 
 
     </LinearLayout>
